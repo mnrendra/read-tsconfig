@@ -1,3 +1,15 @@
-import main from './main'
+import type { TSConfig } from '@mnrendra/types-tsconfig'
+import type { Options } from './types'
 
-export default main
+import mainAsync from './async'
+import mainSync from './sync'
+
+export type {
+  TSConfig,
+  Options
+}
+
+export {
+  mainAsync as readTSConfig,
+  mainSync as readTSConfigSync
+}

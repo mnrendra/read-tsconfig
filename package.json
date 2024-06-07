@@ -25,6 +25,11 @@
     "url": "https://github.com/mnrendra/read-tsconfig/issues"
   },
   "homepage": "https://github.com/mnrendra/read-tsconfig#readme",
+  "dependencies": {
+    "@mnrendra/stack-trace": "^1.0.0",
+    "@mnrendra/types-tsconfig": "^1.0.1",
+    "json5": "^2.2.3"
+  },
   "devDependencies": {
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
