@@ -1,6 +1,6 @@
 {
   "name": "@mnrendra/read-tsconfig",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Read the tsconfig.json file in your project.",
   "private": false,
   "main": "dist/index.js",
