@@ -1,4 +1,5 @@
 import type { TSConfig } from '@mnrendra/types-tsconfig'
+
 import type { Options } from './types'
 
 import mainAsync from './async'
