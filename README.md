@@ -13,9 +13,10 @@ Using `CommonJS`:
 const { readTSConfig, readTSConfigSync } = require('@mnrendra/read-tsconfig')
 
 // Asynchronously
-readTSConfig().then(({ compilerOptions }) => {
-  console.log('asynchronously:', compilerOptions)
-})
+readTSConfig()
+  .then(({ compilerOptions }) => {
+    console.log('asynchronously:', compilerOptions)
+  })
 
 // Synchronously
 const { compilerOptions } = readTSConfigSync()
@@ -27,9 +28,10 @@ Using `ES Module`:
 import { readTSConfig, readTSConfigSync } from '@mnrendra/read-tsconfig'
 
 // Asynchronously
-readTSConfig().then(({ compilerOptions }) => {
-  console.log('asynchronously:', compilerOptions)
-})
+readTSConfig()
+  .then(({ compilerOptions }) => {
+    console.log('asynchronously:', compilerOptions)
+  })
 
 // Synchronously
 const { compilerOptions } = readTSConfigSync()
@@ -42,10 +44,10 @@ import type {
   TSConfig // @mnrendra/types-tsconfig
 } from '@mnrendra/read-tsconfig'
 ```
-### • TSConfig ([@mnrendra/types-tsconfig](https://www.npmjs.com/tsconfig/@mnrendra/types-tsconfig))
+### • TSConfig ([@mnrendra/types-tsconfig](https://www.npmjs.com/package/@mnrendra/types-tsconfig))
 
 ## License
-[MIT](https://github.com/mnrendra/read-packag/blob/HEAD/LICENSE)
+[MIT](https://github.com/mnrendra/read-tsconfig/blob/HEAD/LICENSE)
 
 ## Author
 [@mnrendra](https://github.com/mnrendra)
