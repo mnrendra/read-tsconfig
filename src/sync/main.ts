@@ -1,6 +1,4 @@
-import type { TSConfig } from '@mnrendra/types-tsconfig'
-
-import type { Options } from '../types'
+import type { Options, TSConfig } from '../types'
 
 import validateSkippedStacks from '@mnrendra/validate-skipped-stacks'
 
@@ -11,14 +9,16 @@ import { readSync } from '@mnrendra/read-stacked-json'
 /**
  * Read `tsconfig.json` file synchronously.
  *
- * @param {Object} [options] - Optional params.
+ * @param {Options} [options] - Optional params.
  *
  * @returns {TSConfig} `tsconfig.json` JSON value.
  */
 const main = ({
-  skippedStacks
+  skippedStacks,
+  stackTraceLimit
 }: Options = {
-  skippedStacks: []
+  skippedStacks: [],
+  stackTraceLimit: 10
 }): TSConfig => {
   // Validate skipped stacks.
   const validSkippedStacks = validateSkippedStacks(SKIPPED_STACK, skippedStacks)
@@ -26,7 +26,8 @@ const main = ({
   // Read `tsconfig.json` JSON synchronously.
   const data = readSync<TSConfig>(TARGET_FILE, {
     skippedStacks: validSkippedStacks,
-    isJSON5: true
+    isJSON5: true,
+    stackTraceLimit
   })
 
   // Return `tsconfig.json` JSON value.
