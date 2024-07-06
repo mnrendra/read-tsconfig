@@ -38,13 +38,39 @@ const { compilerOptions } = readTSConfigSync()
 console.log('synchronously:', compilerOptions)
 ```
 
-# Types
-```typescript
-import type {
-  TSConfig // @mnrendra/types-tsconfig
+## Utility
+```javascript
+import {
+  validateSkippedStacks // To validate the list of stacks to be skipped. More info: @mnrendra/validate-skipped-stacks
 } from '@mnrendra/read-tsconfig'
 ```
-### • TSConfig ([@mnrendra/types-tsconfig](https://www.npmjs.com/package/@mnrendra/types-tsconfig))
+
+## Types
+```typescript
+import type {
+  // @mnrendra/types-tsconfig
+  TSConfig,
+  BuildOptions,
+  CompileOnSave,
+  CompilerOptions,
+  BaseURL,
+  Paths,
+  Exclude,
+  Extends,
+  Files,
+  Include,
+  MDX,
+  References,
+  TSNode,
+  WatchOptions,
+  TypeAcquisition,
+  // @mnrendra/read-tsconfig
+  Options,
+  // @mnrendra/validate-skipped-stacks
+  SkippedStacks,
+  ValidSkippedStacks
+} from '@mnrendra/read-tsconfig'
+```
 
 ## License
 [MIT](https://github.com/mnrendra/read-tsconfig/blob/HEAD/LICENSE)
