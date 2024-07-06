@@ -20,11 +20,11 @@ export type {
   TSNode,
   WatchOptions,
   TypeAcquisition,
+  // @mnrendra/read-tsconfig
+  Options,
   // @mnrendra/validate-skipped-stacks
   SkippedStacks,
-  ValidSkippedStacks,
-  // @mnrendra/read-tsconfig
-  Options
+  ValidSkippedStacks
 } from './types'
 
 export {
