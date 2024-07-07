@@ -1,10 +1,8 @@
 import type { Options, TSConfig } from '../types'
 
-import validateSkippedStacks from '@mnrendra/validate-skipped-stacks'
+import { read, validateSkippedStacks } from '@mnrendra/read-stacked-json'
 
 import { SKIPPED_STACK, TARGET_FILE } from '../consts'
-
-import { read } from '@mnrendra/read-stacked-json'
 
 /**
  * Read `tsconfig.json` file asynchronously.
