@@ -1,9 +1,9 @@
-import readAsync from './readAsync'
-import readSync from './readSync'
-import stackTrace from './stackTrace'
+import unmockReadAsync from './readAsync'
+import unmockReadSync from './readSync'
+import unmockStackTrace from './stackTrace'
 
 export {
-  readAsync,
-  readSync,
-  stackTrace
+  unmockReadAsync,
+  unmockReadSync,
+  unmockStackTrace
 }
