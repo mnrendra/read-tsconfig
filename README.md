@@ -1,5 +1,5 @@
 # @mnrendra/read-tsconfig
-Read the `tsconfig.json` file in your project.
+Read `tsconfig.json` file in your project.
 
 ## Install
 ```bash
@@ -38,10 +38,20 @@ const { compilerOptions } = readTSConfigSync()
 console.log('synchronously:', compilerOptions)
 ```
 
-## Utility
+## Options
+### • `skippedStacks`
+*type: `string|string[]`*<br/>
+*default: `[]`*<br/>
+A name or a list of names of stack traces that need to be skipped.
+### • `stackTraceLimit`
+*type: `number`*<br/>
+*default: `10`*<br/>
+The `Error.stackTraceLimit` property specifies the number of stack frames to be collected by a stack trace.
+
+## Utilities
 ```javascript
 import {
-  validateSkippedStacks // To validate the list of stacks to be skipped. More info: @mnrendra/validate-skipped-stacks
+  validateSkippedStacks // To validate a name or a list of names of stack traces that need to be skipped. More info: @see https://github.com/mnrendra/validate-skipped-stacks
 } from '@mnrendra/read-tsconfig'
 ```
 
@@ -64,11 +74,11 @@ import type {
   TSNode,
   WatchOptions,
   TypeAcquisition,
-  // @mnrendra/read-tsconfig
-  Options,
-  // @mnrendra/validate-skipped-stacks
+  // @mnrendra/read-stacked-json
   SkippedStacks,
-  ValidSkippedStacks
+  ValidSkippedStacks,
+  // @mnrendra/read-tsconfig
+  Options
 } from '@mnrendra/read-tsconfig'
 ```
 

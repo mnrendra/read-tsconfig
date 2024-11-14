@@ -1,4 +1,4 @@
-import type { SkippedStacks } from '.'
+import type { SkippedStacks } from '@mnrendra/read-stacked-json'
 
 interface Options {
   /**

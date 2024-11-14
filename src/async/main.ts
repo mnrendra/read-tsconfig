@@ -10,6 +10,8 @@ import { SKIPPED_STACK, TARGET_FILE } from '../consts'
  * @param {Options} [options] - Optional params.
  *
  * @returns {Promise<TSConfig>} `tsconfig.json` JSON value.
+ * 
+ * @see https://github.com/mnrendra/read-tsconfig#readme
  */
 const main = async ({
   skippedStacks,
@@ -32,5 +34,4 @@ const main = async ({
   return data
 }
 
-// Export the `main` as the default value.
 export default main

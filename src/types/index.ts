@@ -21,10 +21,5 @@ export type {
 } from '@mnrendra/types-tsconfig'
 
 export type {
-  SkippedStacks,
-  ValidSkippedStacks
-} from '@mnrendra/read-stacked-json'
-
-export type {
   Options
 }
