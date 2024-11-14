@@ -1,14 +1,7 @@
 import mainAsync from './async'
 import mainSync from './sync'
 
-export {
-  type SkippedStacks,
-  type ValidSkippedStacks,
-  validateSkippedStacks
-} from '@mnrendra/read-stacked-json'
-
 export type {
-  // @mnrendra/types-tsconfig
   TSConfig,
   BuildOptions,
   CompileOnSave,
@@ -23,10 +16,8 @@ export type {
   References,
   TSNode,
   WatchOptions,
-  TypeAcquisition,
-  // @mnrendra/read-tsconfig
-  Options
-} from './types'
+  TypeAcquisition
+} from '@mnrendra/types-tsconfig'
 
 export {
   mainAsync as readTSConfig,
