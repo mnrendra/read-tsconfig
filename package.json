@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rm -rf dist && npx rollup -c",
     "commit": "npx cz",
-    "test": "jest --runInBand"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
