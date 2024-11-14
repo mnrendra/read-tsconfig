@@ -1,5 +1,5 @@
 # @mnrendra/read-tsconfig
-Read the `tsconfig.json` file in your project.
+Read `tsconfig.json` file in your project.
 
 ## Install
 ```bash
@@ -38,17 +38,9 @@ const { compilerOptions } = readTSConfigSync()
 console.log('synchronously:', compilerOptions)
 ```
 
-## Utility
-```javascript
-import {
-  validateSkippedStacks // To validate the list of stacks to be skipped. More info: @mnrendra/validate-skipped-stacks
-} from '@mnrendra/read-tsconfig'
-```
-
 ## Types
 ```typescript
 import type {
-  // @mnrendra/types-tsconfig
   TSConfig,
   BuildOptions,
   CompileOnSave,
@@ -63,12 +55,7 @@ import type {
   References,
   TSNode,
   WatchOptions,
-  TypeAcquisition,
-  // @mnrendra/read-tsconfig
-  Options,
-  // @mnrendra/validate-skipped-stacks
-  SkippedStacks,
-  ValidSkippedStacks
+  TypeAcquisition
 } from '@mnrendra/read-tsconfig'
 ```
 
