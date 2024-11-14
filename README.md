@@ -38,27 +38,9 @@ const { compilerOptions } = readTSConfigSync()
 console.log('synchronously:', compilerOptions)
 ```
 
-## Options
-### • `skippedStacks`
-*type: `string|string[]`*<br/>
-*default: `[]`*<br/>
-A name or a list of names of stack traces that need to be skipped.
-### • `stackTraceLimit`
-*type: `number`*<br/>
-*default: `10`*<br/>
-The `Error.stackTraceLimit` property specifies the number of stack frames to be collected by a stack trace.
-
-## Utilities
-```javascript
-import {
-  validateSkippedStacks // To validate a name or a list of names of stack traces that need to be skipped. More info: @see https://github.com/mnrendra/validate-skipped-stacks
-} from '@mnrendra/read-tsconfig'
-```
-
 ## Types
 ```typescript
 import type {
-  // @mnrendra/types-tsconfig
   TSConfig,
   BuildOptions,
   CompileOnSave,
@@ -73,12 +55,7 @@ import type {
   References,
   TSNode,
   WatchOptions,
-  TypeAcquisition,
-  // @mnrendra/read-stacked-json
-  SkippedStacks,
-  ValidSkippedStacks,
-  // @mnrendra/read-tsconfig
-  Options
+  TypeAcquisition
 } from '@mnrendra/read-tsconfig'
 ```
 

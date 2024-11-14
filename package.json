@@ -8,7 +8,7 @@
   "scripts": {
     "build": "rm -rf dist && npx rollup -c",
     "commit": "npx cz",
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/mnrendra/read-tsconfig#readme",
   "dependencies": {
-    "@mnrendra/read-stacked-json": "^1.6.0",
+    "@mnrendra/read-stacked-json": "^1.6.1",
     "@mnrendra/types-tsconfig": "^1.1.0"
   },
   "devDependencies": {

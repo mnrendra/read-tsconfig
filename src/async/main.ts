@@ -1,33 +1,21 @@
-import type { Options, TSConfig } from '../types'
+import type { TSConfig } from '@mnrendra/types-tsconfig'
 
-import { read, validateSkippedStacks } from '@mnrendra/read-stacked-json'
+import { read } from '@mnrendra/read-stacked-json'
 
-import { SKIPPED_STACK, TARGET_FILE } from '../consts'
+import { TARGET_FILE } from '../consts'
 
 /**
  * Read `tsconfig.json` file asynchronously.
  *
- * @param {Options} [options] - Optional params.
- *
  * @returns {Promise<TSConfig>} `tsconfig.json` JSON value.
- * 
+ *
  * @see https://github.com/mnrendra/read-tsconfig#readme
  */
-const main = async ({
-  skippedStacks,
-  stackTraceLimit
-}: Options = {
-  skippedStacks: [],
-  stackTraceLimit: 10
-}): Promise<TSConfig> => {
-  // Validate skipped stacks.
-  const validSkippedStacks = validateSkippedStacks(SKIPPED_STACK, skippedStacks)
-
+const main = async (): Promise<TSConfig> => {
   // Read `tsconfig.json` JSON asynchronously.
   const data = await read<TSConfig>(TARGET_FILE, {
-    skippedStacks: validSkippedStacks,
     isJSON5: true,
-    stackTraceLimit
+    useCWD: true
   })
 
   // Return `tsconfig.json` JSON value.
